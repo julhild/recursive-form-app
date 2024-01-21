@@ -1,0 +1,44 @@
+<div *ngIf="!question?.hidden" class="ml-6">
+  <h5 class="m-0 my-2">{{ question?.title }}</h5>
+
+  <div
+    *ngIf="question?.inputType === 'checkbox'"
+    class="flex align-items-center gap-2 w-7rem border-round-sm"
+    [ngStyle]="{ border: question?.required ? invalidBorder : 'none' }"
+  >
+    <input
+      type="checkbox"
+      [name]="question?.id"
+      [checked]="question?.value === false"
+      (change)="onCheckboxChange($event, 'No')"
+    />
+    <span>No</span>
+    <input
+      type="checkbox"
+      [name]="question?.id"
+      [checked]="question?.value === true"
+      (change)="onCheckboxChange($event, 'Yes')"
+    />
+    <span>Yes</span>
+  </div>
+
+  <div *ngIf="question?.inputType === 'text'" class="flex gap-2">
+    <input
+      type="text"
+      class="w-full border-round-sm line-height-3"
+      [value]="question?.value"
+      [(ngModel)]="textInput"
+      [ngStyle]="{ border: question?.required ? invalidBorder : validBorder }"
+      (ngModelChange)="onTextChange($event)"
+    />
+  </div>
+
+  <div *ngIf="question?.followUps">
+    <app-single-question
+      *ngFor="let followUp of question?.followUps"
+      [question]="followUp"
+      (valueChanged)="onValueChange()"
+    >
+    </app-single-question>
+  </div>
+</div>

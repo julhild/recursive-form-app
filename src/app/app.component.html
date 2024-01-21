@@ -1,0 +1,16 @@
+<div
+  class="flex flex-column justify-center align-items-center gap-2 p-2 text-100"
+>
+  <h2>Please fill out the form:</h2>
+  <div class="flex justify-center gap-2">
+    <button (click)="onReset()">Reset</button>
+    <button [disabled]="isFormInvalid" (click)="onSave()">Save</button>
+  </div>
+  <div
+    *ngFor="let question of form"
+    class="bg-white border-round-sm p-2 pr-6 w-30rem"
+  >
+    <app-single-question [question]="question" (valueChanged)="onValueChange()">
+    </app-single-question>
+  </div>
+</div>

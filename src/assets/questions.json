@@ -1,0 +1,66 @@
+{"questions": [
+  {
+    "id": "1",
+    "title": "Would you recommend our establishment to a friend?",
+    "value": null,
+    "inputType": "checkbox",
+    "hidden": false,
+    "required": true,
+    "showFollowUpValue": false,
+    "followUps": [
+      {
+        "id": "1.1",
+        "title": "What would you like us to improve in our service?",
+        "value": "",
+        "inputType": "text",
+        "hidden": true,
+        "required": false,
+        "showFollowUpValue": false,
+        "showFollowUp": null
+      },
+      {
+        "id": "1.2",
+        "title": "Was there something particular that you dislike?",
+        "value": null,
+        "inputType": "checkbox",
+        "hidden": true,
+        "required": false,
+        "showFollowUpValue": true,
+        "followUps": [
+          {
+            "id": "1.2.1",
+            "title": "Please describe:",
+            "value": "",
+            "inputType": "text",
+            "hidden": true,
+            "required": false,
+            "showFollowingValue": null,
+            "followingQuestions": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Do you have any other comments?",
+    "value": null,
+    "inputType": "checkbox",
+    "hidden": false,
+    "required": true,
+    "showFollowUpValue": true,
+    "followUps": [
+      {
+        "id": "2.1",
+        "title": "Please share your comment with us:",
+        "value": "",
+        "inputType": "text",
+        "hidden": true,
+        "required": false,
+        "optional": true,
+        "showFollowUpValue": false,
+        "showFollowUp": null
+      }
+    ]
+  }
+]}

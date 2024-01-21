@@ -1,0 +1,25 @@
+@import "/node_modules/primeflex/primeflex.css";
+
+:root {
+  --green: #28a745;
+  --middle-green: #27893a;
+  --light-green: #e9f6ec;
+  --blue: #0284d0;
+  --dark-blue: #1d6695;
+  --dark-grey: #333;
+  --light-blue-background: #e5f2fa;
+  --red: #ff3333;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: var(--light-blue-background);
+  color: var(--dark-grey);
+  padding: 1rem;
+}
+
+input {
+  border-color: var(--blue);
+  shadow: none;
+  outline: none !important;
+}
