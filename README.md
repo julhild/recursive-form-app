@@ -1,5 +1,4 @@
-# recursive-form-app
-Recursive Angular Form
+### Recursive Angular Form
 
 Recursive functions are an interesting and useful programming technique where  a function is a part of its own definition: the function calls on itself. Recursion can be imperative to solve certain type of problems where the outcome depends on the outcome from the smaller parts of the problem. 
 Hier we would like to look at [an example of a dynamic web form](https://stackblitz.com/~/github.com/julhild/recursive-form-app) built using Angular framework where each question can have an arbitrary number and also an arbitrary depth of follow-up questions.
